@@ -1,8 +1,12 @@
 package com.example.tangoDemo.pojo;
 
 import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
+@Setter
+@ToString
 public class OrderResponse {
     private String accountIdentifier;
     private AmountCharged amountCharged;

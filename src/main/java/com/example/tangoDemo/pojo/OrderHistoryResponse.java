@@ -5,7 +5,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Getter
-public class CatalogResponse {
-    private Brands[] brands;
-    private String catalogName;
+@Setter
+public class OrderHistoryResponse {
+    private OrderResponse[] orders;
+    private Page page;
 }
