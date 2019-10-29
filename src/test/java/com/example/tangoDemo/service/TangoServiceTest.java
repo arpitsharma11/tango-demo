@@ -46,8 +46,8 @@ public class TangoServiceTest {
                 "lastName"));
         request.setUtid("U666425");
 
-        Assert.assertEquals("1.0",
-                tangoCardService.orderGiftCard(request).getAmountCharged().getValue());
+        Assert.assertEquals(1.0f,
+                tangoCardService.orderGiftCard(request).getAmountCharged().getValue(), 0);
     }
 
     @Test()
@@ -72,6 +72,7 @@ public class TangoServiceTest {
                 tangoCardService.orderGiftCard(request).getRewardName());
     }
 
+    @Test
     public void OrderHistoryLength(){
         Assert.assertNotEquals((float) 0,tangoCardService.retrievePastOrder().getOrders().length);
     }
